@@ -1,0 +1,29 @@
+spring:
+  config:
+    import: optional:file:env.properties
+  application:
+    name: ${NAME_CARR}
+
+server:
+  port: ${PORT_CARR}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREK_URL}
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  datasource:
+    url: true
+    url: ${BD_CARR}
+    username: ${BD_USER}
+    password: ${BD_PASS}
+  database-platform: ${BD_DIALEC}
+  properties:
+    hibernate:
+      dialect: ${HIB_DIALEC}
+
+datasource:
+  driver-class-name: ${BD_DRIV}

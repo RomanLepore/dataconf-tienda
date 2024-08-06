@@ -1,0 +1,15 @@
+spring:
+  config:
+    import: optional:file:env.properties
+  application:
+    name: ${NAME_EUREK}
+
+server:
+  port: ${PORT_EUREK}
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    lease-renewal-interval-in-seconds: 0

@@ -1,0 +1,28 @@
+spring:
+  config:
+    import: optional:file:env.properties
+  application:
+    name: ${NAME_VTA}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    datasource:
+      url: true
+      url: ${BD_VTA}
+      username: ${BD_USER}
+      password: ${BD_PASS}
+    database-platform: ${BD_DIALEC}
+    properties:
+      hibernate:
+        dialect: ${HIB_DIALEC}
+
+server:
+  port: ${PORT_VTA}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREK_URL}
+
+datasource:
+  driver-class-name: ${BD_DRIV}
